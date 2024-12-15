@@ -12,7 +12,7 @@ function TypeButton({ href, title, color }: TypeButtonInt) {
         className="w-48 h-48 bg-red-500 rounded-full grid place-items-center md:w-72 md:h-72"
         style={{ background: color }}
       >
-        <h3 className="font-semibold text-3xl">{title}</h3>
+        <h3 className="font-semibold text-3xl md:text-5xl drop-shadow-md">{title}</h3>
       </div>
     </Link>
   );
