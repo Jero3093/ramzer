@@ -1,5 +1,4 @@
 import Header from "@/components/Header";
-
 import Loader from "@/components/Loader";
 import ResultView from "@/components/ResultView";
 import Footer from "@/components/Footer";
