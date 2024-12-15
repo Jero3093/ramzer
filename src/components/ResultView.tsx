@@ -1,4 +1,5 @@
 import { MovieInt, TvInt } from "@/utils/Interfaces";
+import WatchlistBtn from "./WatchlistBtn";
 
 function ResultView({
   movies,
@@ -39,6 +40,7 @@ function ResultView({
               : Math.floor(tv?.vote_average ? tv?.vote_average : 0.0)}{" "}
             / 10
           </p>
+          <WatchlistBtn movies={movies} tv={tv} />
         </footer>
       </section>
     </section>

@@ -7,11 +7,9 @@ import useRandomResult from "@/hooks/useRandomResult";
 import { TvInt } from "@/utils/Interfaces";
 
 export default async function TV() {
-  const movies = await useTvShows();
+  const tvShows = await useTvShows();
 
-  const result = useRandomResult<TvInt>({ list: movies });
-
-  console.log(result);
+  const result = useRandomResult<TvInt>({ list: tvShows });
 
   return (
     <main className="min-h-screen flex flex-col items-center text-pretty gap-8 pt-10">
