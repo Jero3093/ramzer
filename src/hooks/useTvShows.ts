@@ -1,10 +1,10 @@
-export default async function useMovies() {
+export default async function useTvShows() {
   try {
     const totalPages = 500;
 
     const randomPage = Math.floor(Math.random() * totalPages);
 
-    const url = `${process.env.TMDB_MOVIE_URL}&page=${randomPage}`;
+    const url = `${process.env.TMDB_TV_URL}&page=${randomPage}`;
 
     const options = {
       method: "GET",

@@ -1,21 +1,24 @@
 import Header from "@/components/Header";
+
 import Loader from "@/components/Loader";
-import Footer from "@/components/Footer";
-import useMovies from "@/hooks/useMovies";
-import useRandomResult from "@/hooks/useRandomResult";
-import { MovieInt } from "@/utils/Interfaces";
 import ResultView from "@/components/ResultView";
+import Footer from "@/components/Footer";
+import useTvShows from "@/hooks/useTvShows";
+import useRandomResult from "@/hooks/useRandomResult";
+import { TvInt } from "@/utils/Interfaces";
 
-export default async function Movies() {
-  const movies = await useMovies();
+export default async function TV() {
+  const movies = await useTvShows();
 
-  const result = useRandomResult<MovieInt>({ list: movies });
+  const result = useRandomResult<TvInt>({ list: movies });
+
+  console.log(result);
 
   return (
     <main className="min-h-screen flex flex-col items-center text-pretty gap-8 pt-10">
       <Header />
       {result ? (
-        <ResultView movies={result} tv={null} />
+        <ResultView movies={null} tv={result} />
       ) : (
         <div className="m-auto flex flex-col items-center gap-4">
           <Loader />
