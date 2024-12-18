@@ -39,3 +39,15 @@ export interface TvInt {
   vote_average: number;
   vote_count: number;
 }
+
+export interface MoviesListInt {
+  id: string | null | undefined;
+  poster_path: string;
+  title: string;
+}
+
+export interface TvShowsListInt {
+  id: string | null | undefined;
+  poster_path: string;
+  name: string;
+}
