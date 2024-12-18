@@ -15,7 +15,9 @@ function ResultView({
           movies ? movies?.poster_path : tv?.poster_path
         }`}
         alt={`${movies ? movies?.title : tv?.name} original poster`}
-        className="rounded-md shadow-md shadow-red-400 w-full max-w-96"
+        className={`rounded-md shadow-md ${
+          movies ? "shadow-sky-400" : "shadow-red-400"
+        } w-full max-w-96`}
       />
       <section className="flex flex-col items-center gap-4 md:gap-6 ">
         <h1 className="text-2xl leading-relaxed font-semibold">
@@ -30,11 +32,19 @@ function ResultView({
         </span>
         <footer className="text-xl flex flex-col items-center gap-4">
           <p>
-            <strong className="text-rose-500">Release Date:</strong>{" "}
+            <strong
+              className={`${movies ? "text-sky-500" : "text-rose-500"}`}
+            >
+              Release Date:
+            </strong>{" "}
             {movies ? movies?.release_date : tv?.first_air_date}
           </p>
           <p>
-            <strong className="text-rose-500">Vote Average:</strong>{" "}
+            <strong
+              className={`${movies ? "text-sky-500" : "text-rose-500"}`}
+            >
+              Vote Average:
+            </strong>{" "}
             {movies
               ? Math.floor(movies?.vote_average)
               : Math.floor(tv?.vote_average ? tv?.vote_average : 0.0)}{" "}

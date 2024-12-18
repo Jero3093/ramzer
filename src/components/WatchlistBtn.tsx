@@ -66,7 +66,7 @@ function WatchlistBtn({
     >
       <div
         className={`w-full h-full ${
-          movies ? "bg-sky-400" : "bg-red-400"
+          movies ? "bg-sky-400 text-black" : "bg-red-400"
         } rounded-md grid place-items-center`}
       >
         Add to Watchlist
