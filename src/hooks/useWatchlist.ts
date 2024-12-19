@@ -4,7 +4,7 @@ function useWatchlist() {
   const watchlist = localStorage.getItem("watchlist");
 
   if (!watchlist) {
-    return null;
+    return { movies: null, tvShows: null };
   } else {
     const parsedWatchlist = JSON.parse(watchlist);
 
