@@ -11,7 +11,7 @@ function Header() {
         title="Home"
       >
         <TbArrowsRandom className="w-14 h-14" />
-        <h1 className="text-4xl font-semibold">Random Motion</h1>
+        <h1 className="text-4xl font-semibold">Ramzer</h1>
       </Link>
     </header>
   );

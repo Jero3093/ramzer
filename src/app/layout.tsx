@@ -13,11 +13,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Random Motion",
+  title: "Ramzer",
   description:
     "Don't know what to watch, random motion makes that easier, pick random movies or tv shows with a single click.",
   keywords:
-    "random, motion, movies, tv, shows, series, anime, randomizer, cinema",
+    "random, movies, tv, shows, series, anime, randomizer, cinema",
 };
 
 export default function RootLayout({
