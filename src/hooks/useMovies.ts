@@ -1,27 +1,26 @@
+import GenRandomNumber from "@/utils/GenRandomNumber";
+
 export default async function useMovies() {
   try {
-    const totalPages = 500;
+    const randomNumb = GenRandomNumber({ totalPages: 500 });
 
-    const randomPage = Math.floor(Math.random() * totalPages);
-
-    const url = `${process.env.TMDB_MOVIE_URL}&page=${randomPage}`;
-
-    const options = {
-      method: "GET",
-      headers: {
-        accept: "application/json",
-        Authorization: `Bearer ${process.env.TMDB_AUTHORIZATION}`,
-      },
-    };
-
-    const req = await fetch(url, options);
+    const req = await fetch(
+      `${process.env.TMDB_MOVIE_URL}&page=${randomNumb}`,
+      {
+        method: "GET",
+        headers: {
+          accept: "application/json",
+          Authorization: `Bearer ${process.env.TMDB_AUTHORIZATION}`,
+        },
+      }
+    );
 
     const result = await req.json();
 
     if (result.results) {
       return result.results;
     } else {
-      return [];
+      return null;
     }
   } catch (e) {
     console.log(e);

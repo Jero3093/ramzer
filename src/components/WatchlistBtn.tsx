@@ -25,7 +25,7 @@ function WatchlistBtn({
       const parsedWatchlist = JSON.parse(watchlist);
 
       if (movies) {
-        let list = parsedWatchlist?.movies;
+        const list = parsedWatchlist?.movies;
 
         const alreadyInList = list.find((e: MovieInt) => e?.id === movies?.id);
 

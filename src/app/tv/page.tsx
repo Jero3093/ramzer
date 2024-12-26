@@ -20,7 +20,7 @@ export default async function TV() {
         <div className="m-auto flex flex-col items-center gap-4">
           <Loader />
           <p className="text-lg text-zinc-500 font-semibold text-center">
-            Finding the best movie for this moment...
+            Finding the best tv shows for this moment...
           </p>
         </div>
       )}

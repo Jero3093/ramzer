@@ -1,7 +1,8 @@
 "use client";
 
 function useWatchlist() {
-  const watchlist = localStorage.getItem("watchlist");
+  const watchlist =
+    typeof window !== "undefined" ? localStorage.getItem("watchlist") : null;
 
   if (!watchlist) {
     return { movies: null, tvShows: null };
